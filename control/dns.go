@@ -23,8 +23,8 @@ import (
 	"github.com/qimaoww/outbound/netproxy"
 	"github.com/qimaoww/outbound/pool"
 	tc "github.com/qimaoww/outbound/protocol/tuic/common"
-	"github.com/daeuniverse/quic-go"
-	"github.com/daeuniverse/quic-go/http3"
+	"github.com/qimaoww/quic-go"
+	"github.com/qimaoww/quic-go/http3"
 	dnsmessage "github.com/miekg/dns"
 )
 

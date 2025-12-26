@@ -35,7 +35,7 @@ jobs:
         uses: daeuniverse/changelogs-generator-action@main
         id: changelog
         with:
-          # https://github.com/daeuniverse/changelogs-generator-action
+          # https://github.com/qimaoww/changelogs-generator-action
           previousRelease: ${{ inputs.previous_release_tag }}
           futureRelease: ${{ inputs.future_release_tag }}
           token: ${{ steps.generate_token.outputs.token }}

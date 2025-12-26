@@ -19,7 +19,7 @@
 - eBPF assets are regenerated via `make ebpf` (see [Makefile](Makefile)); it runs `go generate ./control/control.go` and `./trace/trace.go` with LLVM/Clang settings derived from `CLANG`, `TARGET`, and `MAX_MATCH_SET_LEN`. Always rerun before building when touching C sources or eBPF maps.
 - `make dae` sets `GOOS=linux`, `CGO_ENABLED=0`, and reuses the build tags stored in `.build_tags`. Use `NOSTRIP=y` to keep symbols, or override `MAX_MATCH_SET_LEN` to stay in sync with kernel map assumptions defined in `common/consts`.
 - Low-level BPF tests run through `make ebpf-test`, which regenerates fixtures and executes `go test ./control/kern/tests/...`. Standard Go formatting/testing uses `make fmt` plus `go test ./...`; some packages (e.g., control) expect root privileges or network namespaces.
-- [go.mod](go.mod) pins Go 1.22 with toolchain `go1.23.2` and replaces `github.com/qimaoww/outbound`/`github.com/daeuniverse/quic-go` with sibling directories. Keep this repo checked out alongside those modules or adjust the replace directives when vendoring.
+- [go.mod](go.mod) pins Go 1.22 with toolchain `go1.23.2` and replaces `github.com/qimaoww/outbound`/`github.com/qimaoww/quic-go` with sibling directories. Keep this repo checked out alongside those modules or adjust the replace directives when vendoring.
 
 ## Ops & Diagnostics
 - Runtime metadata lives in `/var/run`: `dae.pid`, `dae.progress`, and `dae.abort` (see [cmd/run.go](cmd/run.go)). Any new command should reuse these paths so systemd units and scripts keep compatibility.

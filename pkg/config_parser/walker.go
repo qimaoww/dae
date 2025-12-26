@@ -3,7 +3,7 @@
  * Copyright (c) 2022-2025, daeuniverse Organization <dae@v2raya.org>
  */
 
-// This file should trace https://github.com/daeuniverse/dae-config-dist/blob/main/dae_config.g4.
+// This file should trace https://github.com/qimaoww/dae-config-dist/blob/main/dae_config.g4.
 
 package config_parser
 
@@ -13,7 +13,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/daeuniverse/dae-config-dist/go/dae_config"
+	"github.com/qimaoww/dae-config-dist/go/dae_config"
 	"github.com/sirupsen/logrus"
 )
 

@@ -9,7 +9,6 @@ require (
 	github.com/antlr/antlr4/runtime/Go/antlr/v4 v4.0.0-20230305170008-8188dc5388df
 	github.com/bits-and-blooms/bloom/v3 v3.7.0
 	github.com/cilium/ebpf v0.15.0
-	github.com/qimaoww/dae-config-dist/go/dae_config v0.0.0-20230604120805-1c27619b592d
 	github.com/daeuniverse/quic-go v0.0.0-20250210145620-2083199a7851
 	github.com/fsnotify/fsnotify v1.7.0
 	github.com/json-iterator/go v1.1.12
@@ -17,7 +16,8 @@ require (
 	github.com/miekg/dns v1.1.61
 	github.com/mohae/deepcopy v0.0.0-20170929034955-c48cc78d4826
 	github.com/okzk/sdnotify v0.0.0-20180710141335-d9becc38acbd
-	github.com/qimaoww/outbound v0.0.0-20250722064253-00c4fbb38759
+	github.com/qimaoww/dae-config-dist/go/dae_config v0.0.0-20230604120805-1c27619b592d
+	github.com/qimaoww/outbound v0.0.0-20251226104634-6d59db1b139d
 	github.com/safchain/ethtool v0.4.1
 	github.com/shirou/gopsutil/v4 v4.24.6
 	github.com/sirupsen/logrus v1.9.3
@@ -100,7 +100,7 @@ require (
 	google.golang.org/grpc v1.65.0 // indirect
 )
 
-replace github.com/qimaoww/outbound => ../outbound
+replace github.com/qimaoww/dae-config-dist/go/dae_config => github.com/daeuniverse/dae-config-dist/go/dae_config v0.0.0-20230604120805-1c27619b592d
 
 // replace github.com/daeuniverse/quic-go => ../quic-go
 

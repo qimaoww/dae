@@ -12,8 +12,8 @@ import (
 
 	"github.com/daeuniverse/dae/common/consts"
 	"github.com/daeuniverse/dae/component/outbound/dialer"
-	_ "github.com/daeuniverse/outbound/dialer"
-	"github.com/daeuniverse/outbound/netproxy"
+	_ "github.com/qimaoww/outbound/dialer"
+	"github.com/qimaoww/outbound/netproxy"
 	"github.com/sirupsen/logrus"
 )
 

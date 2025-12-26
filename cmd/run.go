@@ -22,8 +22,8 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/daeuniverse/outbound/netproxy"
-	"github.com/daeuniverse/outbound/protocol/direct"
+	"github.com/qimaoww/outbound/netproxy"
+	"github.com/qimaoww/outbound/protocol/direct"
 	"gopkg.in/natefinch/lumberjack.v2"
 
 	_ "net/http/pprof"

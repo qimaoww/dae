@@ -10,7 +10,6 @@ require (
 	github.com/bits-and-blooms/bloom/v3 v3.7.0
 	github.com/cilium/ebpf v0.15.0
 	github.com/daeuniverse/dae-config-dist/go/dae_config v0.0.0-20230604120805-1c27619b592d
-	github.com/daeuniverse/outbound v0.0.0-20250722064253-00c4fbb38759
 	github.com/daeuniverse/quic-go v0.0.0-20250210145620-2083199a7851
 	github.com/fsnotify/fsnotify v1.7.0
 	github.com/json-iterator/go v1.1.12
@@ -18,6 +17,7 @@ require (
 	github.com/miekg/dns v1.1.61
 	github.com/mohae/deepcopy v0.0.0-20170929034955-c48cc78d4826
 	github.com/okzk/sdnotify v0.0.0-20180710141335-d9becc38acbd
+	github.com/qimaoww/outbound v0.0.0-20250722064253-00c4fbb38759
 	github.com/safchain/ethtool v0.4.1
 	github.com/shirou/gopsutil/v4 v4.24.6
 	github.com/sirupsen/logrus v1.9.3
@@ -48,6 +48,7 @@ require (
 	github.com/google/pprof v0.0.0-20250208200701-d0013a598941 // indirect
 	github.com/gorilla/websocket v1.5.3 // indirect
 	github.com/klauspost/compress v1.17.9 // indirect
+	github.com/klauspost/cpuid/v2 v2.0.9 // indirect
 	github.com/klauspost/pgzip v1.2.6 // indirect
 	github.com/lufia/plan9stats v0.0.0-20211012122336-39d0f177ccd0 // indirect
 	github.com/nwaples/rardecode v1.1.3 // indirect
@@ -69,6 +70,7 @@ require (
 	golang.org/x/tools v0.29.0 // indirect
 	google.golang.org/genproto/googleapis/rpc v0.0.0-20240711142825-46eb208f015d // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
+	lukechampine.com/blake3 v1.2.1 // indirect
 )
 
 require (
@@ -98,7 +100,7 @@ require (
 	google.golang.org/grpc v1.65.0 // indirect
 )
 
-// replace github.com/daeuniverse/outbound => ../outbound
+replace github.com/qimaoww/outbound => ../outbound
 
 // replace github.com/daeuniverse/quic-go => ../quic-go
 

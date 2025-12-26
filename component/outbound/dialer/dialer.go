@@ -14,8 +14,8 @@ import (
 
 	"github.com/daeuniverse/dae/common"
 	"github.com/daeuniverse/dae/config"
-	D "github.com/daeuniverse/outbound/dialer"
-	"github.com/daeuniverse/outbound/netproxy"
+	D "github.com/qimaoww/outbound/dialer"
+	"github.com/qimaoww/outbound/netproxy"
 	"github.com/sirupsen/logrus"
 )
 

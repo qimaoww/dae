@@ -11,7 +11,7 @@ import (
 
 	"github.com/daeuniverse/dae/common"
 
-	"github.com/daeuniverse/outbound/pkg/fastrand"
+	"github.com/qimaoww/outbound/pkg/fastrand"
 )
 
 var (

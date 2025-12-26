@@ -11,7 +11,7 @@ import (
 	"net/netip"
 	"sync"
 
-	"github.com/daeuniverse/outbound/netproxy"
+	"github.com/qimaoww/outbound/netproxy"
 	dnsmessage "github.com/miekg/dns"
 	"github.com/sirupsen/logrus"
 )

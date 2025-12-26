@@ -17,8 +17,8 @@ import (
 	"github.com/daeuniverse/dae/common/consts"
 	"github.com/daeuniverse/dae/component/outbound/dialer"
 	"github.com/daeuniverse/dae/component/sniffing"
-	"github.com/daeuniverse/outbound/netproxy"
-	"github.com/daeuniverse/outbound/pkg/zeroalloc/io"
+	"github.com/qimaoww/outbound/netproxy"
+	"github.com/qimaoww/outbound/pkg/zeroalloc/io"
 	"github.com/sirupsen/logrus"
 	"golang.org/x/sys/unix"
 )

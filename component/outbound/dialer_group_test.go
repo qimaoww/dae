@@ -12,7 +12,7 @@ import (
 	"github.com/daeuniverse/dae/common/consts"
 	"github.com/daeuniverse/dae/component/outbound/dialer"
 	"github.com/daeuniverse/dae/pkg/logger"
-	"github.com/daeuniverse/outbound/pkg/fastrand"
+	"github.com/qimaoww/outbound/pkg/fastrand"
 	"github.com/sirupsen/logrus"
 )
 

@@ -13,7 +13,7 @@ import (
 	"time"
 
 	"github.com/daeuniverse/dae/common/consts"
-	"github.com/daeuniverse/outbound/pkg/fastrand"
+	"github.com/qimaoww/outbound/pkg/fastrand"
 	"github.com/sirupsen/logrus"
 )
 

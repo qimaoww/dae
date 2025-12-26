@@ -17,7 +17,7 @@ import (
 	ob "github.com/daeuniverse/dae/component/outbound"
 	"github.com/daeuniverse/dae/component/outbound/dialer"
 	"github.com/daeuniverse/dae/component/sniffing"
-	"github.com/daeuniverse/outbound/pool"
+	"github.com/qimaoww/outbound/pool"
 	dnsmessage "github.com/miekg/dns"
 	"github.com/sirupsen/logrus"
 )

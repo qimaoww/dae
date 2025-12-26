@@ -6,8 +6,8 @@
 package dialer
 
 import (
-	D "github.com/daeuniverse/outbound/dialer"
-	"github.com/daeuniverse/outbound/protocol/direct"
+	D "github.com/qimaoww/outbound/dialer"
+	"github.com/qimaoww/outbound/protocol/direct"
 )
 
 func NewFromLink(gOption *GlobalOption, iOption InstanceOption, link string, subscriptionTag string) (*Dialer, error) {

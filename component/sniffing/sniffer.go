@@ -14,8 +14,8 @@ import (
 	"time"
 
 	"github.com/daeuniverse/dae/component/sniffing/internal/quicutils"
-	"github.com/daeuniverse/outbound/pool"
-	"github.com/daeuniverse/outbound/pool/bytes"
+	"github.com/qimaoww/outbound/pool"
+	"github.com/qimaoww/outbound/pool/bytes"
 )
 
 type Sniffer struct {

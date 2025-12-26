@@ -24,7 +24,7 @@ import (
 
 	"github.com/qimaoww/outbound/netproxy"
 
-	internal "github.com/daeuniverse/dae/pkg/ebpf_internal"
+	internal "github.com/qimaoww/dae/pkg/ebpf_internal"
 	dnsmessage "github.com/miekg/dns"
 	"github.com/vishvananda/netlink"
 	"golang.org/x/sys/unix"

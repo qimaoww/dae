@@ -8,7 +8,7 @@ package assets
 import (
 	"errors"
 	"fmt"
-	"github.com/daeuniverse/dae/common/consts"
+	"github.com/qimaoww/dae/common/consts"
 	"io/fs"
 	"os"
 	"path/filepath"

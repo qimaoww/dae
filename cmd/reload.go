@@ -13,8 +13,8 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/daeuniverse/dae/cmd/internal"
-	"github.com/daeuniverse/dae/common/consts"
+	"github.com/qimaoww/dae/cmd/internal"
+	"github.com/qimaoww/dae/common/consts"
 	"github.com/spf13/cobra"
 )
 

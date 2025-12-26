@@ -18,7 +18,7 @@ import (
 	"time"
 	"unsafe"
 
-	"github.com/daeuniverse/dae/component/outbound/dialer"
+	"github.com/qimaoww/dae/component/outbound/dialer"
 	"golang.org/x/sys/unix"
 )
 
@@ -115,7 +115,7 @@ func (a *Anyfrom) WriteToUDPAddrPort(b []byte, addr netip.AddrPort) (n int, err 
 // Sending with GSO might still fail later on, if the interface doesn't support it (see isGSOError).
 func isGSOSupported(uc *net.UDPConn) bool {
 	// TODO: We disable GSO because we haven't thought through how to design to use larger packets (we assume the max size of packet is 1500).
-	// See https://github.com/daeuniverse/dae/blob/cab1e4290967340923d7d5ca52b80f781711c18e/control/control_plane.go#L721C37-L721C37.
+	// See https://github.com/qimaoww/dae/blob/cab1e4290967340923d7d5ca52b80f781711c18e/control/control_plane.go#L721C37-L721C37.
 	return false
 	conn, err := uc.SyscallConn()
 	if err != nil {

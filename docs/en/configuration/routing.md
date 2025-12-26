@@ -54,7 +54,7 @@ mac('02:42:ac:11:00:02') -> direct
 ### Process Name rule (only support localhost process when binding to WAN)
 pname(curl) -> direct
 
-### DSCP rule (match DSCP; is useful for BT bypass). See https://github.com/daeuniverse/dae/discussions/295
+### DSCP rule (match DSCP; is useful for BT bypass). See https://github.com/qimaoww/dae/discussions/295
 dscp(0x4) -> direct
 
 ### Multiple domains rule

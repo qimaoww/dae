@@ -21,8 +21,8 @@ import (
 	"github.com/cilium/ebpf/btf"
 	"github.com/cilium/ebpf/link"
 	"github.com/cilium/ebpf/ringbuf"
-	"github.com/daeuniverse/dae/common/consts"
-	internal "github.com/daeuniverse/dae/pkg/ebpf_internal"
+	"github.com/qimaoww/dae/common/consts"
+	internal "github.com/qimaoww/dae/pkg/ebpf_internal"
 	"github.com/sirupsen/logrus"
 )
 

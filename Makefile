@@ -39,7 +39,7 @@ else
 	VERSION ?= unstable-$(date).r$(count).$(commit)
 endif
 
-BUILD_ARGS := -trimpath -ldflags "-s -w -X github.com/daeuniverse/dae/cmd.Version=$(VERSION) -X github.com/daeuniverse/dae/common/consts.MaxMatchSetLen_=$(MAX_MATCH_SET_LEN)" $(BUILD_ARGS)
+BUILD_ARGS := -trimpath -ldflags "-s -w -X github.com/qimaoww/dae/cmd.Version=$(VERSION) -X github.com/qimaoww/dae/common/consts.MaxMatchSetLen_=$(MAX_MATCH_SET_LEN)" $(BUILD_ARGS)
 
 .PHONY: clean-ebpf ebpf dae submodule submodules
 

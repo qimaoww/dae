@@ -12,9 +12,9 @@ import (
 	"sync"
 	"time"
 
-	"github.com/daeuniverse/dae/common/consts"
-	"github.com/daeuniverse/dae/component/outbound"
-	"github.com/daeuniverse/dae/component/outbound/dialer"
+	"github.com/qimaoww/dae/common/consts"
+	"github.com/qimaoww/dae/component/outbound"
+	"github.com/qimaoww/dae/component/outbound/dialer"
 	"github.com/qimaoww/outbound/netproxy"
 	"github.com/qimaoww/outbound/pool"
 )

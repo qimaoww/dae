@@ -1,4 +1,4 @@
-module github.com/daeuniverse/dae
+module github.com/qimaoww/dae
 
 go 1.22.0
 

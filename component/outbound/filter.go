@@ -9,8 +9,8 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/daeuniverse/dae/component/outbound/dialer"
-	"github.com/daeuniverse/dae/pkg/config_parser"
+	"github.com/qimaoww/dae/component/outbound/dialer"
+	"github.com/qimaoww/dae/pkg/config_parser"
 	"github.com/dlclark/regexp2"
 	"github.com/sirupsen/logrus"
 )

@@ -14,8 +14,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/daeuniverse/dae/common/consts"
-	"github.com/daeuniverse/dae/common/netutils"
+	"github.com/qimaoww/dae/common/consts"
+	"github.com/qimaoww/dae/common/netutils"
 	"github.com/qimaoww/outbound/protocol/direct"
 )
 

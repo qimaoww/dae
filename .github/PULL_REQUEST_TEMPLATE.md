@@ -1,4 +1,4 @@
-<!-- NOTE: Please read the CONTRIBUTING.md guidelines before submitting your patch, and ensure you followed them all: https://github.com/daeuniverse/dae/blob/master/CONTRIBUTING.md -->
+<!-- NOTE: Please read the CONTRIBUTING.md guidelines before submitting your patch, and ensure you followed them all: https://github.com/qimaoww/dae/blob/master/CONTRIBUTING.md -->
 
 ### Background
 
@@ -8,7 +8,7 @@
 
 - [ ] The Pull Request has been fully tested
 - [ ] There's an entry in the CHANGELOGS
-- [ ] There is a user-facing docs PR against https://github.com/daeuniverse/dae
+- [ ] There is a user-facing docs PR against https://github.com/qimaoww/dae
 
 ### Full Changelogs
 

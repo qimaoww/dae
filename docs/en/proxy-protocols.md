@@ -31,14 +31,22 @@
 
 - [x] Shadowsocks
   - [x] AEAD Ciphers
+  - [x] SIP022 AEAD-2022 Ciphers
+    - [x] 2022-blake3-aes-128-gcm
+    - [x] 2022-blake3-aes-256-gcm
+    - [x] 2022-blake3-chacha20-poly1305
   - [x] Stream Ciphers
   - [x] simple-obfs
   - [ ] v2ray-plugin
     - [x] Websocket (+TLS)
 
+  > SIP022 links keep the `ss://2022-blake3-...:BASE64_PSK@host:port#tag` form and require base64-encoded PSKs.
+
   [SIP002](https://shadowsocks.org/doc/sip002.html)
 
   [SIP008](https://shadowsocks.org/doc/sip008.html)
+
+  [SIP022](https://shadowsocks.org/doc/sip022.html)
 
 - [x] ShadowsocksR
 
@@ -50,7 +58,7 @@
 
 - [x] Tuic (v5)
 
-  [Tuic URI Schema](https://github.com/daeuniverse/dae/discussions/182)
+  [Tuic URI Schema](https://github.com/qimaoww/dae/discussions/182)
 
 - [x] Juicity
 
@@ -66,7 +74,7 @@
 
 - [x] Proxy chain (flexible protocol)
 
-  [Proxy chain URI Schema](https://github.com/daeuniverse/dae/discussions/236)
+  [Proxy chain URI Schema](https://github.com/qimaoww/dae/discussions/236)
 
 For other requirements, one way to expand protocol support is by using external proxy programs. Below is an example of using the external naiveproxy.
 

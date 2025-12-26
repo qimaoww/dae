@@ -12,7 +12,7 @@ import (
 	"encoding/binary"
 	"io"
 
-	"github.com/daeuniverse/dae/common"
+	"github.com/qimaoww/dae/common"
 	"github.com/qimaoww/outbound/pool"
 	"golang.org/x/crypto/hkdf"
 )

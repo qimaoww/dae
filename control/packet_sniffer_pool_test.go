@@ -10,7 +10,7 @@ import (
 	"net/netip"
 	"testing"
 
-	"github.com/daeuniverse/dae/component/sniffing"
+	"github.com/qimaoww/dae/component/sniffing"
 )
 
 var testPacketSnifferData = []string{

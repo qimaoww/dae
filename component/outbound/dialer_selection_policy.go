@@ -9,8 +9,8 @@ import (
 	"fmt"
 	"strconv"
 
-	"github.com/daeuniverse/dae/common/consts"
-	"github.com/daeuniverse/dae/config"
+	"github.com/qimaoww/dae/common/consts"
+	"github.com/qimaoww/dae/config"
 )
 
 type DialerSelectionPolicy struct {

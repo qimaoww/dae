@@ -6,7 +6,7 @@ import (
 	"reflect"
 	"sync"
 
-	_ "github.com/daeuniverse/dae/pkg/geodata/protoext"
+	_ "github.com/qimaoww/dae/pkg/geodata/protoext"
 	"google.golang.org/protobuf/reflect/protoreflect"
 	"google.golang.org/protobuf/runtime/protoimpl"
 )

@@ -54,7 +54,7 @@ mac('02:42:ac:11:00:02') -> direct
 ### 进程名称规则（绑定WAN时仅支持本机进程）
 pname(curl) -> direct
 
-### DSCP规则（匹配 DSCP，可用于绕过 BT），见 https://github.com/daeuniverse/dae/discussions/295
+### DSCP规则（匹配 DSCP，可用于绕过 BT），见 https://github.com/qimaoww/dae/discussions/295
 dscp(0x4) -> direct
 
 ### 多个域名规则

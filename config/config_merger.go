@@ -13,8 +13,8 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/daeuniverse/dae/common"
-	"github.com/daeuniverse/dae/pkg/config_parser"
+	"github.com/qimaoww/dae/common"
+	"github.com/qimaoww/dae/pkg/config_parser"
 )
 
 var (

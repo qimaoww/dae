@@ -10,7 +10,7 @@ import (
 	"reflect"
 	"time"
 
-	"github.com/daeuniverse/dae/pkg/config_parser"
+	"github.com/qimaoww/dae/pkg/config_parser"
 )
 
 var (
@@ -36,7 +36,7 @@ type Global struct {
 	DisableWaitingNetwork      bool          `mapstructure:"disable_waiting_network" default:"false"`
 	EnableLocalTcpFastRedirect bool          `mapstructure:"enable_local_tcp_fast_redirect" default:"false"`
 	AutoConfigKernelParameter  bool          `mapstructure:"auto_config_kernel_parameter" default:"false"`
-	// DEPRECATED: not used as of https://github.com/daeuniverse/dae/pull/458
+	// DEPRECATED: not used as of https://github.com/qimaoww/dae/pull/458
 	AutoConfigFirewallRule bool          `mapstructure:"auto_config_firewall_rule" default:"false"`
 	SniffingTimeout        time.Duration `mapstructure:"sniffing_timeout" default:"100ms"`
 	TlsImplementation      string        `mapstructure:"tls_implementation" default:"tls"`

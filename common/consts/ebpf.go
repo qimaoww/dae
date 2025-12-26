@@ -9,7 +9,7 @@ import (
 	"strconv"
 	"strings"
 
-	internal "github.com/daeuniverse/dae/pkg/ebpf_internal"
+	internal "github.com/qimaoww/dae/pkg/ebpf_internal"
 )
 
 const (

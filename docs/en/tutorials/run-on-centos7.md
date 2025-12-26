@@ -65,7 +65,7 @@ Now you can download dae and run it as usual
 
 ```bash
 mkdir -p /opt/dae && cd /opt/dae
-wget https://github.com/daeuniverse/dae/releases/download/v0.2.2/dae-linux-x86_64.zip
+wget https://github.com/qimaoww/dae/releases/download/v0.2.2/dae-linux-x86_64.zip
 unzip dae-linux-x86_64.zip && rm -f dae-linux-x86_64.zip
 cp example.dae config.dae
 chmod 600 config.dae

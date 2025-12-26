@@ -9,9 +9,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/daeuniverse/dae/common/consts"
-	"github.com/daeuniverse/dae/component/outbound/dialer"
-	"github.com/daeuniverse/dae/pkg/logger"
+	"github.com/qimaoww/dae/common/consts"
+	"github.com/qimaoww/dae/component/outbound/dialer"
+	"github.com/qimaoww/dae/pkg/logger"
 	"github.com/qimaoww/outbound/pkg/fastrand"
 	"github.com/sirupsen/logrus"
 )

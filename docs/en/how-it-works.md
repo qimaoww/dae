@@ -37,7 +37,7 @@ The proxy mechanism of dae is akin to other programs. However, when binding to t
 
 In terms of benchmarking, dae's proxy performance slightly surpasses that of other proxy programs, but the difference is not significant.
 
-As of [PR:implement stack bypass](https://github.com/daeuniverse/dae/pull/458), the hijack datapath has been changed to bypass stack for better performance and less stack influence (e.g. netfilter, systemd-sysctl). Please refer to the PR description for better understanding.
+As of [PR:implement stack bypass](https://github.com/qimaoww/dae/pull/458), the hijack datapath has been changed to bypass stack for better performance and less stack influence (e.g. netfilter, systemd-sysctl). Please refer to the PR description for better understanding.
 
 ### Direct Connection Mechanism
 

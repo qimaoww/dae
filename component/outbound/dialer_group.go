@@ -10,8 +10,8 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/daeuniverse/dae/common/consts"
-	"github.com/daeuniverse/dae/component/outbound/dialer"
+	"github.com/qimaoww/dae/common/consts"
+	"github.com/qimaoww/dae/component/outbound/dialer"
 	_ "github.com/qimaoww/outbound/dialer"
 	"github.com/qimaoww/outbound/netproxy"
 	"github.com/sirupsen/logrus"

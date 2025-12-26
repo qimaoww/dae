@@ -17,9 +17,9 @@ import (
 	"net/url"
 	"time"
 
-	"github.com/daeuniverse/dae/common"
-	"github.com/daeuniverse/dae/common/consts"
-	"github.com/daeuniverse/dae/component/dns"
+	"github.com/qimaoww/dae/common"
+	"github.com/qimaoww/dae/common/consts"
+	"github.com/qimaoww/dae/component/dns"
 	"github.com/qimaoww/outbound/netproxy"
 	"github.com/qimaoww/outbound/pool"
 	tc "github.com/qimaoww/outbound/protocol/tuic/common"
@@ -368,7 +368,7 @@ func (d *DoUDP) Close() error {
 }
 
 func sendHttpDNS(client *http.Client, target string, upstream *dns.Upstream, data []byte) (respMsg *dnsmessage.Msg, err error) {
-	// disable redirect https://github.com/daeuniverse/dae/pull/649#issuecomment-2379577896
+	// disable redirect https://github.com/qimaoww/dae/pull/649#issuecomment-2379577896
 	client.CheckRedirect = func(req *http.Request, via []*http.Request) error {
 		return fmt.Errorf("do not use a server that will redirect, upstream: %v", upstream.String())
 	}

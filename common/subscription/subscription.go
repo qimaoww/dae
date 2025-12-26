@@ -19,8 +19,8 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/daeuniverse/dae/common"
-	"github.com/daeuniverse/dae/config"
+	"github.com/qimaoww/dae/common"
+	"github.com/qimaoww/dae/config"
 	"github.com/sirupsen/logrus"
 )
 

@@ -13,7 +13,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/daeuniverse/dae/component/sniffing/internal/quicutils"
+	"github.com/qimaoww/dae/component/sniffing/internal/quicutils"
 	"github.com/qimaoww/outbound/pool"
 	"github.com/qimaoww/outbound/pool/bytes"
 )

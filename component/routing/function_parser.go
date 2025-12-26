@@ -12,9 +12,9 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/daeuniverse/dae/common"
-	"github.com/daeuniverse/dae/common/consts"
-	"github.com/daeuniverse/dae/pkg/config_parser"
+	"github.com/qimaoww/dae/common"
+	"github.com/qimaoww/dae/common/consts"
+	"github.com/qimaoww/dae/pkg/config_parser"
 	"github.com/sirupsen/logrus"
 	"golang.org/x/exp/constraints"
 )

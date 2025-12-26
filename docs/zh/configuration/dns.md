@@ -104,7 +104,7 @@ dns {
         # doh_custom_path: 'https://dns.example.com:443/custom-path'
     }
     # 'request' 和 'response' 的 routing 格式和全局的 'routing' 类似。
-    # 参考 https://github.com/daeuniverse/dae/blob/main/docs/zh/configuration/routing.md
+    # 参考 https://github.com/qimaoww/dae/blob/main/docs/zh/configuration/routing.md
     routing {
         # 根据 DNS 查询，决定使用哪个 DNS 上游。
         # 按由上到下的顺序匹配。

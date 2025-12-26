@@ -7,8 +7,8 @@ package routing
 
 import (
 	"fmt"
-	"github.com/daeuniverse/dae/common/consts"
-	"github.com/daeuniverse/dae/pkg/config_parser"
+	"github.com/qimaoww/dae/common/consts"
+	"github.com/qimaoww/dae/pkg/config_parser"
 	"github.com/sirupsen/logrus"
 	"strconv"
 )

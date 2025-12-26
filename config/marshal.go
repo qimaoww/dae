@@ -12,8 +12,8 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/daeuniverse/dae/common"
-	"github.com/daeuniverse/dae/pkg/config_parser"
+	"github.com/qimaoww/dae/common"
+	"github.com/qimaoww/dae/pkg/config_parser"
 )
 
 // Marshal assume all tokens should be legal, and does not prevent injection attacks.

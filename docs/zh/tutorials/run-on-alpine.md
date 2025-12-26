@@ -53,7 +53,7 @@ vi /etc/init.d/sysfs
 
 ## 安装 dae
 
-安装程序： <https://github.com/daeuniverse/dae-installer/>
+安装程序： <https://github.com/qimaoww/dae-installer/>
 
 此安装程序提供了一个 dae 的 OpenRC 服务脚本，安装后，您需要在 `/usr/local/etc/dae/config.dae` 中添加一个配置文件，然后将其权限设置为 600 或 640：
 

@@ -106,7 +106,7 @@ dns {
         # doh_custom_path: 'https://dns.example.com:443/custom-path'
     }
     # The routing format of 'request' and 'response' is similar with section 'routing'.
-    # See https://github.com/daeuniverse/dae/blob/main/docs/en/configuration/routing.md
+    # See https://github.com/qimaoww/dae/blob/main/docs/en/configuration/routing.md
     routing {
         # According to the request of dns query, decide to use which DNS upstream.
         # Match rules from top to bottom.

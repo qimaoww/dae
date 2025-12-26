@@ -21,10 +21,10 @@ import (
 	"time"
 	"unsafe"
 
-	"github.com/daeuniverse/dae/common"
+	"github.com/qimaoww/dae/common"
 
-	"github.com/daeuniverse/dae/common/consts"
-	"github.com/daeuniverse/dae/common/netutils"
+	"github.com/qimaoww/dae/common/consts"
+	"github.com/qimaoww/dae/common/netutils"
 	"github.com/qimaoww/outbound/netproxy"
 	"github.com/qimaoww/outbound/pkg/fastrand"
 	"github.com/qimaoww/outbound/pool"

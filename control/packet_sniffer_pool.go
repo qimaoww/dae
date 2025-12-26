@@ -11,7 +11,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/daeuniverse/dae/component/sniffing"
+	"github.com/qimaoww/dae/component/sniffing"
 )
 
 const (

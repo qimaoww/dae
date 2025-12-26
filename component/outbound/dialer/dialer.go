@@ -12,8 +12,8 @@ import (
 	"time"
 	"unsafe"
 
-	"github.com/daeuniverse/dae/common"
-	"github.com/daeuniverse/dae/config"
+	"github.com/qimaoww/dae/common"
+	"github.com/qimaoww/dae/config"
 	D "github.com/qimaoww/outbound/dialer"
 	"github.com/qimaoww/outbound/netproxy"
 	"github.com/sirupsen/logrus"

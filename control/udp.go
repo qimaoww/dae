@@ -12,11 +12,11 @@ import (
 
 	"time"
 
-	"github.com/daeuniverse/dae/common"
-	"github.com/daeuniverse/dae/common/consts"
-	ob "github.com/daeuniverse/dae/component/outbound"
-	"github.com/daeuniverse/dae/component/outbound/dialer"
-	"github.com/daeuniverse/dae/component/sniffing"
+	"github.com/qimaoww/dae/common"
+	"github.com/qimaoww/dae/common/consts"
+	ob "github.com/qimaoww/dae/component/outbound"
+	"github.com/qimaoww/dae/component/outbound/dialer"
+	"github.com/qimaoww/dae/component/sniffing"
 	"github.com/qimaoww/outbound/pool"
 	dnsmessage "github.com/miekg/dns"
 	"github.com/sirupsen/logrus"

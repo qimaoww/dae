@@ -18,9 +18,9 @@ import (
 	"sync"
 
 	"github.com/cilium/ebpf"
-	"github.com/daeuniverse/dae/common"
-	"github.com/daeuniverse/dae/common/consts"
-	internal "github.com/daeuniverse/dae/pkg/ebpf_internal"
+	"github.com/qimaoww/dae/common"
+	"github.com/qimaoww/dae/common/consts"
+	internal "github.com/qimaoww/dae/pkg/ebpf_internal"
 	"github.com/sirupsen/logrus"
 )
 

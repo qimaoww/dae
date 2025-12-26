@@ -36,7 +36,7 @@ global {
     wan_interface: auto
 
     # Automatically configure Linux kernel parameters like ip_forward and send_redirects. Check out
-    # https://github.com/daeuniverse/dae/blob/main/docs/en/user-guide/kernel-parameters.md to see what will dae do.
+    # https://github.com/qimaoww/dae/blob/main/docs/en/user-guide/kernel-parameters.md to see what will dae do.
     auto_config_kernel_parameter: true
 
     ##### Node connectivity check.
@@ -95,7 +95,7 @@ global {
     tls_implementation: tls
 
     # The Client Hello ID for uTLS to imitate. This takes effect only if tls_implementation is utls.
-    # See more: https://github.com/daeuniverse/dae/blob/331fa23c16/component/outbound/transport/tls/utls.go#L17
+    # See more: https://github.com/qimaoww/dae/blob/331fa23c16/component/outbound/transport/tls/utls.go#L17
     utls_imitate: chrome_auto
 
     # TLS fragmentation support. If is true, dae will send Client Hello in fragments to bypass SNI blocking.
@@ -145,16 +145,18 @@ subscription {
 node {
     # Add your node links here.
     # Support socks5, http, https, ss, ssr, vmess, vless, trojan, tuic, juicity, hysteria2, etc.
-    # Full support list: https://github.com/daeuniverse/dae/blob/main/docs/en/proxy-protocols.md
+    # Full support list: https://github.com/qimaoww/dae/blob/main/docs/en/proxy-protocols.md
     'socks5://localhost:1080'
     mylink: 'ss://LINK'
+    # SIP022 example: PSK must be base64-encoded per https://shadowsocks.org/doc/sip022.html
+    ss2022_demo: 'ss://2022-blake3-aes-256-gcm:c3MyMDIyLWFlcy1rZXk=@2022.example.com:28443#ss2022-demo'
     node1: 'vmess://LINK'
     node2: 'vless://LINK'
     chains: 'tuic://LINK -> vmess://LINK'
     hysteria2: 'hysteria2://password@server-ip:port/?sni=domain'
 }
 
-# See https://github.com/daeuniverse/dae/blob/main/docs/en/configuration/dns.md for full examples.
+# See https://github.com/qimaoww/dae/blob/main/docs/en/configuration/dns.md for full examples.
 dns {
     # For example, if ipversion_prefer is 4 and the domain name has both type A and type AAAA records, the dae will only
     # respond to type A queries and response empty answer to type AAAA queries.
@@ -283,7 +285,7 @@ group {
     }
 }
 
-# See https://github.com/daeuniverse/dae/blob/main/docs/en/configuration/routing.md for full examples.
+# See https://github.com/qimaoww/dae/blob/main/docs/en/configuration/routing.md for full examples.
 routing {
     ### Preset rules.
 

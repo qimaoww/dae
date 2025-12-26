@@ -53,7 +53,7 @@ Be careful that the format of the script `/etc/init.d/sysfs` must be correct, or
 
 ## Install dae
 
-Installer: <https://github.com/daeuniverse/dae-installer/>
+Installer: <https://github.com/qimaoww/dae-installer/>
 
 This installer offered an OpenRC service script of dae, after installation, you should add a config file to `/usr/local/etc/dae/config.dae`, then set its permission to 600 or 640:
 

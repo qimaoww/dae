@@ -14,8 +14,8 @@ import (
 	"os"
 	"syscall"
 
-	"github.com/daeuniverse/dae/common"
-	"github.com/daeuniverse/dae/common/consts"
+	"github.com/qimaoww/dae/common"
+	"github.com/qimaoww/dae/common/consts"
 	"golang.org/x/sys/unix"
 )
 

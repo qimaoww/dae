@@ -182,7 +182,7 @@ jobs:
             esac
 
             fpm -s dir -t $pkg_mgr -a $pkg_arch -v ${VERSION/v/} -n dae \
-                  --url "https://github.com/daeuniverse/dae" \
+                  --url "https://github.com/qimaoww/dae" \
                   --description "eBPF-based Linux high-performance transparent proxy solution" \
                   --maintainer "daeuniverse <dae@v2raya.org>" \
                   --license 'AGPL-3.0' \

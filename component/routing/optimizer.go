@@ -11,10 +11,10 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/daeuniverse/dae/common/assets"
-	"github.com/daeuniverse/dae/common/consts"
-	"github.com/daeuniverse/dae/pkg/config_parser"
-	"github.com/daeuniverse/dae/pkg/geodata"
+	"github.com/qimaoww/dae/common/assets"
+	"github.com/qimaoww/dae/common/consts"
+	"github.com/qimaoww/dae/pkg/config_parser"
+	"github.com/qimaoww/dae/pkg/geodata"
 	"github.com/mohae/deepcopy"
 	"github.com/sirupsen/logrus"
 )

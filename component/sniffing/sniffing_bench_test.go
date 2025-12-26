@@ -9,7 +9,7 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/daeuniverse/dae/common"
+	"github.com/qimaoww/dae/common"
 
 	"github.com/qimaoww/outbound/pkg/fastrand"
 )

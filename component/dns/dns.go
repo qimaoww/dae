@@ -11,11 +11,11 @@ import (
 	"net/url"
 	"sync"
 
-	"github.com/daeuniverse/dae/common"
-	"github.com/daeuniverse/dae/common/assets"
-	"github.com/daeuniverse/dae/common/consts"
-	"github.com/daeuniverse/dae/component/routing"
-	"github.com/daeuniverse/dae/config"
+	"github.com/qimaoww/dae/common"
+	"github.com/qimaoww/dae/common/assets"
+	"github.com/qimaoww/dae/common/consts"
+	"github.com/qimaoww/dae/component/routing"
+	"github.com/qimaoww/dae/config"
 	dnsmessage "github.com/miekg/dns"
 	"github.com/sirupsen/logrus"
 )

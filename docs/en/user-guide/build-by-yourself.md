@@ -14,7 +14,7 @@ make
 ### Compilation
 
 ```shell
-git clone https://github.com/daeuniverse/dae.git
+git clone https://github.com/qimaoww/dae.git
 cd dae
 git submodule update --init
 ## Minimal dependency build
@@ -50,10 +50,10 @@ popd
 Download the example config file:
 
 ```shell
-curl -L -o example.dae https://github.com/daeuniverse/dae/raw/main/example.dae
+curl -L -o example.dae https://github.com/qimaoww/dae/raw/main/example.dae
 ```
 
-See [example.dae](https://github.com/daeuniverse/dae/blob/main/example.dae).
+See [example.dae](https://github.com/qimaoww/dae/blob/main/example.dae).
 
 After fine tuning, run dae:
 

@@ -1,9 +1,9 @@
 # dae
 
-<img src="https://github.com/daeuniverse/dae/blob/main/logo.png" border="0" width="25%">
+<img src="https://github.com/qimaoww/dae/blob/main/logo.png" border="0" width="25%">
 
 <p align="left">
-    <img src="https://github.com/daeuniverse/dae/actions/workflows/build.yml/badge.svg" alt="Build"/>
+    <img src="https://github.com/qimaoww/dae/actions/workflows/build.yml/badge.svg" alt="Build"/>
     <img src="https://custom-icon-badges.herokuapp.com/github/license/daeuniverse/dae?logo=law&color=orange" alt="License"/>
     <img src="https://custom-icon-badges.herokuapp.com/github/v/release/daeuniverse/dae?logo=rocket" alt="version">
     <img src="https://custom-icon-badges.herokuapp.com/github/issues-pr-closed/daeuniverse/dae?color=purple&logo=git-pull-request&logoColor=white"/>
@@ -25,6 +25,7 @@ As a successor of [v2rayA](https://github.com/v2rayA/v2rayA), dae abandoned v2ra
 - [x] Support to automatically switch nodes according to policy. That is to say, support to automatically test independent TCP/UDP/IPv4/IPv6 latencies, and then use the best nodes for corresponding traffic according to user-defined policy.
 - [x] Support advanced DNS resolution process.
 - [x] Support full-cone NAT for shadowsocks, trojan(-go) and socks5 (no test).
+- [x] Support Shadowsocks SIP022 (2022-blake3-aes-128/256-gcm and 2022-blake3-chacha20-poly1305) alongside classic SIP002/SIP008 nodes.
 - [x] Support various trending proxy protocols, seen in [proxy-protocols.md](./docs/en/proxy-protocols.md).
 
 ## Getting Started
@@ -51,11 +52,11 @@ See [How it works](./docs/en/how-it-works.md).
 
 ## Contributors
 
-Special thanks goes to all [contributors](https://github.com/daeuniverse/dae/graphs/contributors). If you would like to contribute, please see the [instructions](./docs/en/development/contribute.md). Also, it is recommended following the [commit-msg-guide](./docs/en/development/commit-msg-guide.md).
+Special thanks goes to all [contributors](https://github.com/qimaoww/dae/graphs/contributors). If you would like to contribute, please see the [instructions](./docs/en/development/contribute.md). Also, it is recommended following the [commit-msg-guide](./docs/en/development/commit-msg-guide.md).
 
 ## License
 
-[AGPL-3.0 (C) daeuniverse](https://github.com/daeuniverse/dae/blob/main/LICENSE)
+[AGPL-3.0 (C) daeuniverse](https://github.com/qimaoww/dae/blob/main/LICENSE)
 
 ## Stargazers over time
 

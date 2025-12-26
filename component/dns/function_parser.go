@@ -10,9 +10,9 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/daeuniverse/dae/component/routing"
-	"github.com/daeuniverse/dae/pkg/config_parser"
-	dnsmessage "github.com/miekg/dns"
+	"github.com/miekg/dns"
+	"github.com/qimaoww/dae/component/routing"
+	"github.com/qimaoww/dae/pkg/config_parser"
 	"github.com/sirupsen/logrus"
 )
 
@@ -20,7 +20,7 @@ func TypeParserFactory(callback func(f *config_parser.Function, types []uint16, 
 	return func(log *logrus.Logger, f *config_parser.Function, key string, paramValueGroup []string, overrideOutbound *routing.Outbound) (err error) {
 		var types []uint16
 		for _, v := range paramValueGroup {
-			if t, ok := dnsmessage.StringToType[strings.ToUpper(v)]; ok {
+			if t, ok := dns.StringToType[strings.ToUpper(v)]; ok {
 				types = append(types, t)
 				continue
 			}

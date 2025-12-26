@@ -7,7 +7,7 @@ package domain_matcher
 
 import (
 	"fmt"
-	"github.com/daeuniverse/dae/common/consts"
+	"github.com/qimaoww/dae/common/consts"
 	"regexp"
 	"strings"
 )

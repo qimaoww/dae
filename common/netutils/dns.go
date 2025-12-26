@@ -15,7 +15,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/daeuniverse/dae/common/consts"
+	"github.com/qimaoww/dae/common/consts"
 	"github.com/qimaoww/outbound/netproxy"
 	"github.com/qimaoww/outbound/pkg/fastrand"
 	"github.com/qimaoww/outbound/pool"

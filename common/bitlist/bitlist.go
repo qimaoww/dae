@@ -9,7 +9,7 @@ import (
 	"fmt"
 	"math/bits"
 
-	"github.com/daeuniverse/dae/pkg/anybuffer"
+	"github.com/qimaoww/dae/pkg/anybuffer"
 	"github.com/qimaoww/outbound/common"
 )
 

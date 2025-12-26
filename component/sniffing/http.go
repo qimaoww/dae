@@ -11,7 +11,7 @@ import (
 	"strings"
 	"unicode"
 
-	"github.com/daeuniverse/dae/common"
+	"github.com/qimaoww/dae/common"
 )
 
 func (s *Sniffer) SniffHttp() (d string, err error) {

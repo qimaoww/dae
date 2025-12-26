@@ -166,7 +166,7 @@ sudo dnf install dae
 作为替代，你也可以使用 `docker compose`:
 
 ```shell
-git clone --depth=1 https://github.com/daeuniverse/dae
+git clone --depth=1 https://github.com/qimaoww/dae
 docker compose up -d --build
 ```
 
@@ -178,7 +178,7 @@ dae 可以以守护进程（systemd）的形式运行，见 [run as daemon](../e
 
 ### 安装脚本
 
-见 [daeuniverse/dae-installer](https://github.com/daeuniverse/dae-installer)（或使用 [镜像站](https://hubmirror.v2raya.org/daeuniverse/dae-installer)）。
+见 [daeuniverse/dae-installer](https://github.com/qimaoww/dae-installer)（或使用 [镜像站](https://hubmirror.v2raya.org/daeuniverse/dae-installer)）。
 
 ### 手动构建
 
@@ -210,7 +210,7 @@ subscription {
   # 在下面填入你的订阅链接。
 }
 
-# 更多的 DNS 样例见 https://github.com/daeuniverse/dae/blob/main/docs/en/configuration/dns.md
+# 更多的 DNS 样例见 https://github.com/qimaoww/dae/blob/main/docs/en/configuration/dns.md
 dns {
   upstream {
     googledns: 'tcp+udp://dns.google:53'
@@ -236,7 +236,7 @@ group {
   }
 }
 
-# 更多的 Routing 样例见 https://github.com/daeuniverse/dae/blob/main/docs/en/configuration/routing.md
+# 更多的 Routing 样例见 https://github.com/qimaoww/dae/blob/main/docs/en/configuration/routing.md
 routing {
   pname(NetworkManager) -> direct
   dip(224.0.0.0/3, 'ff00::/8') -> direct
@@ -270,9 +270,9 @@ dns {
 }
 ```
 
-完整样例：[example.dae](https://github.com/daeuniverse/dae/blob/main/example.dae)。
+完整样例：[example.dae](https://github.com/qimaoww/dae/blob/main/example.dae)。
 
-如果你使用 PVE，可以参考 [#37](https://github.com/daeuniverse/dae/discussions/37)。
+如果你使用 PVE，可以参考 [#37](https://github.com/qimaoww/dae/discussions/37)。
 
 ## PPPoE
 如果希望代理 pppoe 接口, 请将 wan/lan_interface 设置为 pppd 生成的接口 (即 ppp0 / pppoe-wan) 而不是物理接口, 对于 wan 接口是 pppoe 的情况, 使用 auto 即可。

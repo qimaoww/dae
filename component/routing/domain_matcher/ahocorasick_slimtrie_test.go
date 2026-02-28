@@ -7,6 +7,7 @@ package domain_matcher
 
 import (
 	"math/rand"
+	"strings"
 	"testing"
 
 	"github.com/qimaoww/dae/common/consts"
@@ -19,6 +20,9 @@ func TestAhocorasickSlimtrie(t *testing.T) {
 	logrus.SetLevel(logrus.TraceLevel)
 	simulatedDomainSet, err := getDomain()
 	if err != nil {
+		if strings.Contains(err.Error(), "geosite.dat: file does not exist") {
+			t.Skip(err)
+		}
 		t.Fatal(err)
 	}
 	bf := NewBruteforce(consts.MaxMatchSetLen)

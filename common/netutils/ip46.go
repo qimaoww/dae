@@ -11,8 +11,8 @@ import (
 	"net/netip"
 	"sync"
 
-	"github.com/qimaoww/outbound/netproxy"
 	dnsmessage "github.com/miekg/dns"
+	"github.com/qimaoww/outbound/netproxy"
 	"github.com/sirupsen/logrus"
 )
 
@@ -63,7 +63,7 @@ func ResolveIp46(ctx context.Context, dialer netproxy.Dialer, dns netip.AddrPort
 		var e error
 		addrs6, e = ResolveNetip(ctx6, dialer, dns, host, dnsmessage.TypeAAAA, network)
 		if e != nil && !errors.Is(e, context.Canceled) {
-			err6 = e
+			_err6 = e
 			return
 		}
 	}()

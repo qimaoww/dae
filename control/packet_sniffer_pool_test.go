@@ -43,6 +43,7 @@ func TestPacketSniffer_Normal(t *testing.T) {
 func TestPacketSniffer_Mismatched(t *testing.T) {
 	dst := netip.MustParseAddrPort("2.2.2.2:2222")
 	for _, _data := range testPacketSnifferData {
+		dst = netip.AddrPortFrom(dst.Addr(), dst.Port()+1)
 		data, _ := hex.DecodeString(_data)
 		sniffer, _ := DefaultPacketSnifferSessionMgr.GetOrCreate(PacketSnifferKey{
 			LAddr: netip.MustParseAddrPort("1.1.1.1:1111"),
@@ -54,7 +55,6 @@ func TestPacketSniffer_Mismatched(t *testing.T) {
 			t.Fatal(err)
 		}
 		if sniffer.NeedMore() {
-			dst = netip.AddrPortFrom(dst.Addr(), dst.Port()+1)
 			continue
 		}
 		sniffer.Close()

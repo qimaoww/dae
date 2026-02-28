@@ -1,7 +1,7 @@
 /*
 *  SPDX-License-Identifier: AGPL-3.0-only
 *  Copyright (c) 2022-2025, daeuniverse Organization <dae@v2raya.org>
-*/
+ */
 
 package control
 
@@ -17,15 +17,15 @@ import (
 	"net/url"
 	"time"
 
+	"github.com/daeuniverse/quic-go"
+	"github.com/daeuniverse/quic-go/http3"
+	dnsmessage "github.com/miekg/dns"
 	"github.com/qimaoww/dae/common"
 	"github.com/qimaoww/dae/common/consts"
 	"github.com/qimaoww/dae/component/dns"
 	"github.com/qimaoww/outbound/netproxy"
 	"github.com/qimaoww/outbound/pool"
 	tc "github.com/qimaoww/outbound/protocol/tuic/common"
-	"github.com/qimaoww/quic-go"
-	"github.com/qimaoww/quic-go/http3"
-	dnsmessage "github.com/miekg/dns"
 )
 
 type DnsForwarder interface {

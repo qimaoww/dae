@@ -7,7 +7,9 @@ package netutils
 
 import (
 	"context"
+	"fmt"
 	"net/netip"
+	"strings"
 	"testing"
 	"time"
 
@@ -15,10 +17,15 @@ import (
 )
 
 func TestResolveIp46(t *testing.T) {
+	direct.InitDirectDialers("223.5.5.5:53")
 	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
 	defer cancel()
 	ip46, err4, err6 := ResolveIp46(ctx, direct.SymmetricDirect, netip.MustParseAddrPort("223.5.5.5:53"), "ipv6.google.com", "udp", false)
 	if err4 != nil || err6 != nil {
+		errText := strings.ToLower(fmt.Sprint(err4, " ", err6))
+		if strings.Contains(errText, "operation not permitted") {
+			t.Skip(err4, err6)
+		}
 		t.Fatal(err4, err6)
 	}
 	if !ip46.Ip4.IsValid() && !ip46.Ip6.IsValid() {

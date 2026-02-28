@@ -113,6 +113,6 @@ ebpf-test: submodule clean-ebpf
     echo $(STRIP_FLAG) && \
     go generate ./control/kern/tests/bpf_test.go && \
     go clean -testcache && \
-    go test -v ./control/kern/tests/...
+    go test -tags=ebpf_test -v ./control/kern/tests/...
 
 ## End Ebpf

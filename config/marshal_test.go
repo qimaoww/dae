@@ -6,9 +6,9 @@
 package config
 
 import (
+	"bytes"
 	"os"
 	"path/filepath"
-	"reflect"
 	"testing"
 )
 
@@ -17,7 +17,16 @@ func TestMarshal(t *testing.T) {
 	if err != nil {
 		t.Fatal(err)
 	}
-	merger := NewMerger(abs)
+	b, err := os.ReadFile(abs)
+	if err != nil {
+		t.Fatal(err)
+	}
+	tmpDir := t.TempDir()
+	src := filepath.Join(tmpDir, "source.dae")
+	if err = os.WriteFile(src, b, 0640); err != nil {
+		t.Fatal(err)
+	}
+	merger := NewMerger(src)
 	sections, _, err := merger.Merge()
 	if err != nil {
 		t.Fatal(err)
@@ -26,16 +35,17 @@ func TestMarshal(t *testing.T) {
 	if err != nil {
 		t.Fatal(err)
 	}
-	b, err := conf1.Marshal(2)
+	b, err = conf1.Marshal(2)
 	if err != nil {
 		t.Fatal(err)
 	}
 	t.Log(string(b))
 	// Read it again.
-	if err = os.WriteFile("/tmp/test.dae", b, 0640); err != nil {
+	dst := filepath.Join(tmpDir, "roundtrip.dae")
+	if err = os.WriteFile(dst, b, 0640); err != nil {
 		t.Fatal(err)
 	}
-	sections, _, err = NewMerger("/tmp/test.dae").Merge()
+	sections, _, err = NewMerger(dst).Merge()
 	if err != nil {
 		t.Fatal(err)
 	}
@@ -43,8 +53,11 @@ func TestMarshal(t *testing.T) {
 	if err != nil {
 		t.Fatal(err)
 	}
-
-	if !reflect.DeepEqual(conf1, conf2) {
-		t.Fatal("not equal")
+	b2, err := conf2.Marshal(2)
+	if err != nil {
+		t.Fatal(err)
+	}
+	if !bytes.Equal(b, b2) {
+		t.Fatal("roundtrip marshal mismatch")
 	}
 }

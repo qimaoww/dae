@@ -221,8 +221,9 @@ func (a *AliveDialerSet) NotifyLatencyChange(dialer *Dialer, alive bool) {
 			a.minLatency.sortingLatency = sortingLatency
 			a.minLatency.dialer = dialer
 		} else if a.minLatency.dialer == dialer {
+			prevSortingLatency := a.minLatency.sortingLatency
 			a.minLatency.sortingLatency = sortingLatency
-			if !alive || sortingLatency > a.minLatency.sortingLatency {
+			if !alive || sortingLatency > prevSortingLatency {
 				// Latency increases.
 				if !alive {
 					a.minLatency.dialer = nil

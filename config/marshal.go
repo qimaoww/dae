@@ -150,6 +150,7 @@ func (m *Marshaller) marshalLeaf(key string, from reflect.Value, depth int) (err
 		}
 		switch from.Index(0).Interface().(type) {
 		case fmt.Stringer, string,
+			uint, int,
 			uint8, uint16, uint32, uint64,
 			int8, int16, int32, int64,
 			float32, float64,
@@ -166,6 +167,15 @@ func (m *Marshaller) marshalLeaf(key string, from reflect.Value, depth int) (err
 				vals = append(vals, v.String(true, true, false))
 			}
 			m.writeLine(depth, key+":"+strings.Join(vals, "&&"))
+		case []*config_parser.Function:
+			funcGroups := from.Interface().([][]*config_parser.Function)
+			for _, funcs := range funcGroups {
+				var vals []string
+				for _, f := range funcs {
+					vals = append(vals, f.String(true, true, false))
+				}
+				m.writeLine(depth, key+":"+strings.Join(vals, "&&"))
+			}
 		case KeyableString:
 			m.writeLine(depth, key+" {")
 			if err = m.marshalStringList(from, depth+1, true); err != nil {
@@ -178,6 +188,7 @@ func (m *Marshaller) marshalLeaf(key string, from reflect.Value, depth int) (err
 	default:
 		switch val := from.Interface().(type) {
 		case fmt.Stringer, string,
+			uint, int,
 			uint8, uint16, uint32, uint64,
 			int8, int16, int32, int64,
 			float32, float64,
@@ -219,6 +230,8 @@ func (m *Marshaller) marshalParam(from reflect.Value, depth int) (err error) {
 				for _, r := range rules {
 					m.writeLine(depth, r.String(false, true, true))
 				}
+			case "FilterAnnotation":
+				// Routing parser metadata, not a serializable field.
 			default:
 				return fmt.Errorf("unknown reserved field: %v", structField.Name)
 			}

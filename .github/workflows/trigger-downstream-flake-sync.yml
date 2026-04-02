@@ -25,7 +25,21 @@ jobs:
   dispatch-downstream-workflow:
     runs-on: ubuntu-latest
     steps:
+      - name: Check downstream sync secrets
+        id: check_secrets
+        env:
+          GH_APP_ID: ${{ secrets.GH_APP_ID }}
+          GH_APP_PRIVATE_KEY: ${{ secrets.GH_APP_PRIVATE_KEY }}
+        run: |
+          if [ -n "$GH_APP_ID" ] && [ -n "$GH_APP_PRIVATE_KEY" ]; then
+            echo "ready=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+            echo "Skipping downstream sync because GH_APP_ID/GH_APP_PRIVATE_KEY are not configured." >> "$GITHUB_STEP_SUMMARY"
+          fi
+
       - name: Generate GitHub auth token
+        if: ${{ steps.check_secrets.outputs.ready == 'true' }}
         # https://github.com/tibdex/github-app-token
         id: generate_token
         uses: tibdex/github-app-token@v2.1.0
@@ -34,6 +48,7 @@ jobs:
           private_key: ${{ secrets.GH_APP_PRIVATE_KEY }}
 
       - name: Dispatch
+        if: ${{ steps.check_secrets.outputs.ready == 'true' }}
         uses: convictional/trigger-workflow-and-wait@v1.6.5
         with:
           owner: ${{ github.repository_owner }}

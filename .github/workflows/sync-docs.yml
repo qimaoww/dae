@@ -37,10 +37,12 @@ jobs:
       - name: Get metadata from HEAD sha
         id: export
         run: |
-          echo "git_sha_long=${{ github.sha }}" >> $GITHUB_OUTPUT
-          echo "git_sha_short=$(echo ${{ github.sha }} | cut -c1-6)" >> $GITHUB_OUTPUT
-          echo "git_commit_msg=$(git log --format=%s -n 1 ${{ github.sha }})" >> $GITHUB_OUTPUT
-          echo "git_run_number=${{ github.run_number }}" >> $GITHUB_OUTPUT
+          {
+            echo "git_sha_long=${{ github.sha }}"
+            echo "git_sha_short=$(echo "${{ github.sha }}" | cut -c1-6)"
+            echo "git_commit_msg=$(git log --format=%s -n 1 "${{ github.sha }}")"
+            echo "git_run_number=${{ github.run_number }}"
+          } >> "$GITHUB_OUTPUT"
 
       - name: Generate artifacts
         run: |
@@ -58,7 +60,20 @@ jobs:
     name: Synchronize changes to dae-docs
     runs-on: ubuntu-latest
     steps:
+      - name: Check docs sync token
+        id: check_token
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+        run: |
+          if [ -n "$GH_TOKEN" ]; then
+            echo "ready=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+            echo "Skipping dae-docs sync because GH_TOKEN is not configured." >> "$GITHUB_STEP_SUMMARY"
+          fi
+
       - name: Checkout to daeuniverse/dae-docs
+        if: ${{ steps.check_token.outputs.ready == 'true' }}
         uses: actions/checkout@v4
         with:
           repository: daeuniverse/dae-docs
@@ -66,12 +81,14 @@ jobs:
           ref: master
 
       - name: Copy artifacts from build job to local path
+        if: ${{ steps.check_token.outputs.ready == 'true' }}
         uses: actions/download-artifact@v4.1.4
         with:
           name: pre_flight_artifacts
           path: docs/
 
       - name: Create commits
+        if: ${{ steps.check_token.outputs.ready == 'true' }}
         run: |
           git config user.name 'daebot'
           git config user.email 'daebot@users.noreply.github.com'
@@ -80,8 +97,9 @@ jobs:
           git commit -m "ci(auto-release): push proposed documentation changes from upstream dae project"
 
       - name: Create Pull Request
+        if: ${{ steps.check_token.outputs.ready == 'true' }}
         id: create_pr
-        uses: peter-evans/create-pull-request@v5
+        uses: peter-evans/create-pull-request@v7
         with:
           author: daebot <dae@v2raya.org>
           committer: daebot <dae@v2raya.org>
@@ -107,4 +125,3 @@ jobs:
           team-reviewers: |
             docs
           draft: false
-
